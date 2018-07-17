@@ -34,14 +34,27 @@ public class Post {
     @OneToMany(mappedBy = "post")
     private List<PostImage> postImages;
 
-    private double askingPrice;
-
     private double latitude;
 
     private double longitude;
 
     @CreatedDate
     private Date createdDate;
+
+    public Post() {}
+
+    public Post(String subject, String description, Item item, MainCategory mainCategory, SubCategory subCategory, User user, List<PostImage> postImages, double latitude, double longitude, Date createdDate) {
+        this.subject = subject;
+        this.description = description;
+        this.item = item;
+        this.mainCategory = mainCategory;
+        this.subCategory = subCategory;
+        this.user = user;
+        this.postImages = postImages;
+        this.latitude = latitude;
+        this.longitude = longitude;
+        this.createdDate = createdDate;
+    }
 
     public SubCategory getSubCategory() {
         return subCategory;
@@ -65,14 +78,6 @@ public class Post {
 
     public void setCreatedDate(Date createdDate) {
         this.createdDate = createdDate;
-    }
-
-    public double getAskingPrice() {
-        return askingPrice;
-    }
-
-    public void setAskingPrice(double askingPrice) {
-        this.askingPrice = askingPrice;
     }
 
     public String getSubject() {

@@ -1,8 +1,8 @@
 package com.madcrow.gun_class.Controllers;
 
 import com.madcrow.gun_class.Entities.PostEntities.Post;
-import com.madcrow.gun_class.Entities.PostEntities.PostDTO;
-import com.madcrow.gun_class.Entities.PostEntities.PostRepository;
+import com.madcrow.gun_class.Entities.DataTransferObjects.PostDTO;
+import com.madcrow.gun_class.Entities.Repositories.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -28,13 +28,10 @@ public class PostController {
     }
 
     @GetMapping("/posts/{id}")
-    public Optional<Post> searchPost(@PathVariable Long id)
+    public PostDTO searchPost(@PathVariable Long id)
     {
         Optional<Post> post = service.findById(id);
-
-
-        //URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(post.get().getId()).toUri();
-        return post;
+        return new PostDTO(post);
     }
 
     @GetMapping("/posts")

@@ -6,7 +6,7 @@ import com.madcrow.gun_class.CustomExceptions.UserNotFoundException;
 import com.madcrow.gun_class.Entities.PostEntities.Post;
 import com.madcrow.gun_class.Entities.UserEntities.User;
 import com.madcrow.gun_class.Entities.UserEntities.UserImage;
-import com.madcrow.gun_class.Entities.UserEntities.UserRepository;
+import com.madcrow.gun_class.Entities.Repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.context.i18n.LocaleContextHolder;

@@ -28,7 +28,6 @@ public class PostImage {
         this.post = post;
     }
 
-
     public Boolean getPrimaryImage() {
         return primaryImage;
     }
@@ -36,8 +35,6 @@ public class PostImage {
     public void setPrimaryImage(Boolean primaryImage) {
         this.primaryImage = primaryImage;
     }
-
-
 
     public Long getId() {
         return id;
