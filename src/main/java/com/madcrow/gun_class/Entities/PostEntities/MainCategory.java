@@ -1,14 +1,12 @@
 package com.madcrow.gun_class.Entities.PostEntities;
 
-
-import org.springframework.web.bind.annotation.GetMapping;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
-public class Category {
+public class MainCategory {
 
     @Id
     @GeneratedValue

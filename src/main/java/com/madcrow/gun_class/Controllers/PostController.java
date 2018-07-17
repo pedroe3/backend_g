@@ -45,6 +45,4 @@ public class PostController {
         PostDTO postDTO = new PostDTO(post);
         return postDTO;
     }
-
-
 }

@@ -14,14 +14,14 @@ public class SubCategory {
     private boolean active;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    private Category category;
+    private MainCategory mainCategory;
 
-    public Category getCategory() {
-        return category;
+    public MainCategory getMainCategory() {
+        return mainCategory;
     }
 
-    public void setCategory(Category category) {
-        this.category = category;
+    public void setMainCategory(MainCategory mainCategory) {
+        this.mainCategory = mainCategory;
     }
 
     public Long getId() {

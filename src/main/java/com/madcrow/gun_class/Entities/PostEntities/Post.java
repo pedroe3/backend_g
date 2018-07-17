@@ -1,14 +1,10 @@
 package com.madcrow.gun_class.Entities.PostEntities;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.madcrow.gun_class.Entities.ItemEntities.Item;
 import com.madcrow.gun_class.Entities.UserEntities.User;
-import org.hibernate.annotations.OnDelete;
-import org.hibernate.annotations.OnDeleteAction;
 import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 import java.util.Date;
 import java.util.List;
 
@@ -27,7 +23,7 @@ public class Post {
     private Item item;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    private Category category;
+    private MainCategory mainCategory;
 
     @ManyToOne(fetch = FetchType.EAGER)
     private SubCategory subCategory;
@@ -87,12 +83,12 @@ public class Post {
         this.subject = subject;
     }
 
-    public Category getCategory() {
-        return category;
+    public MainCategory getMainCategory() {
+        return mainCategory;
     }
 
-    public void setCategory(Category category) {
-        this.category = category;
+    public void setMainCategory(MainCategory mainCategory) {
+        this.mainCategory = mainCategory;
     }
 
     public Long getId() {

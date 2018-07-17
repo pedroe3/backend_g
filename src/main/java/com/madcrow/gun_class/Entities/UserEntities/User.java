@@ -8,6 +8,7 @@ import javax.validation.constraints.Size;
 import java.util.List;
 
 @Entity
+@Table(name = "user_data")
 public class User {
 
     @Id
@@ -26,7 +27,6 @@ public class User {
 
     @Size(max = 50, message = "last name has a maximum of 50 character")
     private String lastName;
-
 
     @Email
     @Size(max = 100, message = "email has a maximum of 100 characters")
